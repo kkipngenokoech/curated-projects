@@ -18,3 +18,14 @@ you have 10 tries to guess the secret number.
 N/B : the next lines of code:
   the secret number then will be the first `secret_number_length` of your shuffled length.
   the number to be returned should be a string.
+
+## get_clue() 
+  - this function will return a string with the fermi, pico, and bagels clues depending on the guess, and secret number parameters
+  - the first case it checks if the guess is correct, it then returns you got it.
+  - if the guess is not wrong, the game now has to figure out which clue to give the player.
+  - so the code loops trough the length of guess as it compares if the indexed elements compare, if they do return fermi else returns pico if it exists anywhere in the string.
+  it then checks if the clue is empty, if it does it returns bagels.
+  - `sort()` - returns an alphabetically sorted list of the clues.
+  - If the clues are always sorted in alphabetical order, the player can’t be sure which number the Fermi clue refers. This is what we want for the game.
+  `return ''.join()` - The join() string method returns a list of strings as a single string joined together. the `''` helps us include space between the two strings.
+  
