@@ -34,4 +34,21 @@ N/B : the next lines of code:
   - this function checks if the player entered a valid number, guess.
 ## play_again()
   - this function returns true or false based on if the player wants to play again or not.
-  
+
+
+## the game:
+The print() function calls will tell the player the rules of the game and what the Pico, Fermi, and Bagels clues mean
+
+the first while loop:
+infinite while loop that has a condition of True so it will loop forever until a break statement is executed. Inside the infinite loop, you get a secret number from the get_secret_number() function, passing it NUMDIGITS to tell how many digits you want the secret number to have. This secret number is assigned to secret_number. Remember, the value in secret_number is a string not an integer.
+
+you then inform the user the number of guesses he's left with/ has
+
+then you get the players guess.The code keeps looping and asking the player for a guess until the player enters a valid guess. A valid guess has only digits and the same number of digits as the secret number
+
+you then pass the players guess to the clue to return a success or a clue to the player.
+
+the last two if's check if the:
+player won or lost and asks the player to guess again or breaks out of the loop if he won
+
+then ask the player if he wants to play again, that's if it returns true; and the game will start all together.
