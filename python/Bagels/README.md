@@ -32,3 +32,6 @@ N/B : the next lines of code:
 
 ## is_only_digits()
   - this function checks if the player entered a valid number, guess.
+## play_again()
+  - this function returns true or false based on if the player wants to play again or not.
+  
