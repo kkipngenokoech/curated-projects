@@ -20,3 +20,11 @@ def get_clue(guess, secret_number):
         return 'Bagels'
     clue.sort()
     return ''.join(clue)
+
+def is_only_digits(numbers):
+    if numbers == '':
+        return False
+    for index in numbers:
+        if index not in '0 1 2 3 4 5 6 7 8 9'.split():
+            return False
+    return True

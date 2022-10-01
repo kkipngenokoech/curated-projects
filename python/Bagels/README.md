@@ -28,4 +28,7 @@ N/B : the next lines of code:
   - `sort()` - returns an alphabetically sorted list of the clues.
   - If the clues are always sorted in alphabetical order, the player can’t be sure which number the Fermi clue refers. This is what we want for the game.
   `return ''.join()` - The join() string method returns a list of strings as a single string joined together. the `''` helps us include space between the two strings.
-  
+
+
+## is_only_digits()
+  - this function checks if the player entered a valid number, guess.
