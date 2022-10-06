@@ -14,5 +14,19 @@
         <div id="header">
             <h1 id="main_header">Rock Paper Scissors</h1>
         </div>
+        <div>
+            <p>welcome to rock paper scissors, you are playing against a computer:</p>
+            <div id="player_choice" onsubmit="test_game()">
+                you choose?
+                <!-- <button type="button" class="btn btn-primary">Rock</button>
+                <button type="button" class="btn btn-primary">Paper</button>
+                <button type="button" class="btn btn-primary">Scissors</button> -->
+                <input type="text" placeholder="enter your choice"  id="playerchoice" onkeyup="test_game()">
+                <input type="submit" name="" id="confirm_choice" onclick="test_game()">
+            </div>
+            <div>
+                <span id="output"></span>
+            </div>
+        </div>
     </body>
 </html>
