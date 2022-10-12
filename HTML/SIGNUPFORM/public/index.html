@@ -5,39 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp Form</title>
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
     <h1>signup form</h1>
     <form action="">
-        <div>
-            <table>
-                <tr>
-                    <td><label for="firstname">FIRST NAME</label> </td>
-                    <td><label for="firstname">LAST NAME</label> <br></td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="firstname" id="first_name"></td>
-                    <td><input type="text" name="lastname" id="last_name"></td>
-                </tr>
-                <tr>
-                    <td><label for="email">EMAIL</label></td>
-                    <td><label for="phonenumber">PHONE NUMBER</label></td>
-                </tr>
-                <tr>
-                    <td><input type="email" name="email" id="email"></td>
-                    <td><input type="number" name="phonenumber" id="phonenumber"></td>
-                </tr>
-                <tr>
-                    <td><label for="password">PASSWORD</label></td>
-                    <td><label for="confirmpassword">CONFIRM PASSWORD</label></td>
-                </tr>
-                <tr>
-                    <td><input type="password" name="password" id="password"></td>
-                    <td><input type="password" name="confirmpassword" id="confirmpassword"></td>
-                </tr>
-            </table>
-            <br>
-            <input type="submit" value="create account">
+        <div class="split left">
+            
+        </div>
+        <div class="split right flex-container">
+            <div class="top">
+                Welcome to Multiverse!
+            </div>
+            <div class="centered">
+                <table >
+                    <tr>
+                        <td><label for="firstname">FIRST NAME</label> </td>
+                        <td><label for="firstname">LAST NAME</label> <br></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="firstname" id="first_name"></td>
+                        <td><input type="text" name="lastname" id="last_name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">EMAIL</label></td>
+                        <td><label for="phonenumber">PHONE NUMBER</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" name="email" id="email"></td>
+                        <td><input type="number" name="phonenumber" id="phonenumber"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">PASSWORD</label></td>
+                        <td><label for="confirmpassword">CONFIRM PASSWORD</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" id="password"></td>
+                        <td><input type="password" name="confirmpassword" id="confirmpassword"></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="create account">
+            </div>    
         </div>
     </form>
 </body>
