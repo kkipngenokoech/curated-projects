@@ -10,7 +10,11 @@
 
 .left {
     left : 0;
-    background-color: #111;
+    /* background-color: #111; */
+    background-image: url(../images/christopherosten.jpg);
+    background-repeat: no-repeat;
+    width: 50%;
+    background-size: contain;
 }
 
 .right {
