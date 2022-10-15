@@ -14,7 +14,12 @@
         <h1><span>StoicKonnect</span></h1>
     </div>
     <div>
-        <form class="w-full max-w-lg" action="" name="Book">
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"  value="Add Book"  name="add_book" id="toggle-form" onclick="openForm()">
+            Add Book
+        </button>
+    </div> 
+    <div>
+        <form class="w-full max-w-lg" action="" id="Book">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -70,16 +75,16 @@
             </div>
             <div class="button-center">
                 <span class="add-space"></span>
-                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onclick="Add_book()" value="Add Book"  name="add_book">
-                    Add Book
-                </button>
-                
                 <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                     Display Books
                 </button>
+                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" id="close-btn" onclick="closeForm()">
+                    close Form
+                </button>
             </div>
           </form>
-    </div> 
+          
+    </div>
 
     <script src="../src/index.js"></script>
 </body>

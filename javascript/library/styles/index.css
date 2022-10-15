@@ -34,7 +34,7 @@ h1:hover span{
     margin: 0 auto;
     height: 100vh;
     position: absolute;
-    top: 68%;
+    top: 73%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     justify-content: center;
@@ -46,4 +46,12 @@ h1:hover span{
     /* tab-size: 8; */
     display: inline-block;
     margin-left: 110px;
+}
+
+#Book {
+  display: none;
+}
+
+#close-btn {
+  background-color: red;
 }
