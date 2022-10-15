@@ -27,3 +27,23 @@ h1:hover span{
   body {
     background-color: grey;
   }
+
+.button-center {
+    
+    text-align: center;
+    margin: 0 auto;
+    height: 100vh;
+    position: absolute;
+    top: 68%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.add-space {
+    /* tab-size: 8; */
+    display: inline-block;
+    margin-left: 110px;
+}
