@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+.flex-container .Navbar-section {
+    border-style: outset;
+    height: 70px;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    margin: auto;
+    color: white;
+    position: fixed;
+}
+
+.flex-container .body-section {
+    background-color: darkgray;
+    height: 645px;
+    border-style: inset;
+    width: 100%;
+}
+
+.flex-container > div {
+    /* background-color: #f1f1f1; */
+    margin : 2px;
+    /* padding: 20px; */
+    /* font-size: 30px; */
+  }
