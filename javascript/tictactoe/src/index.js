@@ -12,12 +12,12 @@ function init() {
     //be sure to call the init function!
 init();
 
-function () {
-    Board.forEach (function(mark, index)
-    {
-        console.log(mark, index)
-    })
-}
+// function () {
+//     Board.forEach (function(mark, index)
+//     {
+//         console.log(mark, index)
+//     })
+// }
 /*----- cached element references -----*/
 /*----- event listeners -----*/
 /*----- functions -----*/
