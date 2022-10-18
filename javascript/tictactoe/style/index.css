@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 .flex-container1 {
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 .flex-container1 .Navbar-section {
@@ -15,6 +15,7 @@
     margin: auto;
     color: white;
     position: fixed;
+    grid-template-columns: 1fr 2fr;
 }
 
 .flex-container1 .body-section {
@@ -68,9 +69,19 @@
     }
     #reset-button {
     text-align: center;
+    color: white;
     font-size: 20px;
-    border: 1px solid black;
+    /* border: 1px solid red; */
     height: 55px;
-    width: 100px;
+    width:auto;
     margin: 10px;
+    background-color: black;
     }
+#reset-button:hover {
+    background-color: red;
+}
+
+#board {
+    background-color: aliceblue;
+    border-color: black;
+}
