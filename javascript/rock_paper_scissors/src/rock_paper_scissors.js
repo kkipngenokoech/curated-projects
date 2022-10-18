@@ -7,7 +7,7 @@ function computer_choice(list_of_choices)
     return random_item
 }
 const choice_list = ["rock","paper","scissors"]
-let get_computer_choice = computer_choice(choice_list)
+// let get_computer_choice = computer_choice(choice_list) - used for debugging
 function playround (computerselection, playerselection)
 {
     if (computerselection === "rock")
@@ -63,8 +63,8 @@ submit.addEventListener('click', () => {
     const playerInput = document.getElementById('playerChoice').value.toLowerCase()
     if(choice_list.includes(playerInput))
     {
+        let get_computer_choice = computer_choice(choice_list)
         output.innerHTML = (playround(get_computer_choice, playerInput))
-        get_computer_choice = computer_choice(choice_list)
 
     }
     else
