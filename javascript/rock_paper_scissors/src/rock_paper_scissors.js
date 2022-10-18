@@ -1,62 +1,77 @@
 function computer_choice(list_of_choices)
 {
     const random_index = Math.random()*list_of_choices.length
-    const random_item = list[random_index]
+    // console.log (random_index) - used for debugging
+    const random_item = list_of_choices[Math.floor(random_index)]
+    // console.log(random_item) - used for debugging
     return random_item
 }
-const choice_list = ["ROck","paper","scissors"]
+const choice_list = ["rock","paper","scissors"]
 const get_computer_choice = computer_choice(choice_list)
 function playround (computerselection, playerselection)
 {
-    if (get_computer_choice === "rock")
+    if (computerselection === "rock")
     {
         if (playerselection === "scissors")
         {
-            return `you lose! ${get_computer_choice} beats ${playerselection}`;
+            return `you lose! ${computerselection} beats ${playerselection}`;
         }
         else if (playerselection === "paper")
         {
-            return `you win!yay, ${playerselection} beats ${get_computer_choice}`;
+            return `you win!yay, ${playerselection} beats ${computerselection}`;
         }
         else
         {
-              return `you both chose ${get_computer_choice}, its a draw`;
+              return `you both chose ${computerselection}, its a draw`;
         }
     }
-    else if (get_computer_choice === "paper")
+    else if (computerselection === "paper")
     {
         if (playerselection === "rock")
         {
-            return `you lose! ${get_computer_choice} beats ${playerselection}`;
+            return `you lose! ${computerselection} beats ${playerselection}`;
         }
         else if (playerselection === "scissors")
         {
-            return `you win ${playerselection} beats ${get_computer_choice}`;
+            return `you win ${playerselection} beats ${computerselection}`;
         }
         else
         {
-              return `you both chose ${get_computer_choice}, its a draw`;
+              return `you both chose ${computerselection}, its a draw`;
         }
     }
     else
     {
         if (playerselection === "rock")
         {
-            return `you win!, ${playerselection} beats ${get_computer_choice}`;
+            return `you win!, ${playerselection} beats ${computerselection}`;
         }
         else if (playerselection === "paper")
         {
-            return `you lose!, ${get_computer_choice} beats ${playerselection}`;
+            return `you lose!, ${computerselection} beats ${playerselection}`;
         }
         else
         {
-            return `let's call it a draw, ${playerselection} equals ${get_computer_choice}`;
+            return `let's call it a draw, ${playerselection} equals ${computerselection}`;
         }
     }
 }
 
-function test_game()
-{
-    const player_selection = document.getElementById('playerchoice').value
-    alert(`you chose ${player_selection}`)
-}
+const submit = document.querySelector('#confirmChoice')
+const output = document.querySelector('#output')
+submit.addEventListener('click', () => {
+    const playerInput = document.getElementById('playerChoice').value.toLowerCase()
+    if(choice_list.includes(playerInput))
+    {
+        output.innerHTML = (playround(get_computer_choice, playerInput))
+    }
+    else
+    {
+        output.innerHTML = (`Kindly choose Rock, paper or scissors, ${playerInput} is not part of the choices`)
+    }
+    // alert(playerInput)   - used for debugging
+    // alert(playround(get_computer_choice,playerInput)) - used for debugging
+})
+// const playerChoice = prompt("enter your choice:")
+console.log(playround(get_computer_choice, playerChoice))
+// console.log(get_computer_choice) - used for debugging
