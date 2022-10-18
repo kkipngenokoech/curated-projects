@@ -7,7 +7,7 @@ function computer_choice(list_of_choices)
     return random_item
 }
 const choice_list = ["rock","paper","scissors"]
-const get_computer_choice = computer_choice(choice_list)
+let get_computer_choice = computer_choice(choice_list)
 function playround (computerselection, playerselection)
 {
     if (computerselection === "rock")
@@ -64,6 +64,8 @@ submit.addEventListener('click', () => {
     if(choice_list.includes(playerInput))
     {
         output.innerHTML = (playround(get_computer_choice, playerInput))
+        get_computer_choice = computer_choice(choice_list)
+
     }
     else
     {
@@ -73,5 +75,5 @@ submit.addEventListener('click', () => {
     // alert(playround(get_computer_choice,playerInput)) - used for debugging
 })
 // const playerChoice = prompt("enter your choice:")
-console.log(playround(get_computer_choice, playerChoice))
+// console.log(playround(get_computer_choice, playerChoice)) - used for debugging
 // console.log(get_computer_choice) - used for debugging
