@@ -8,20 +8,24 @@ function computer_choice(list_of_choices)
 }
 const choice_list = ["rock","paper","scissors"]
 // let get_computer_choice = computer_choice(choice_list) - used for debugging
+let winner = ""
 function playround (computerselection, playerselection)
 {
     if (computerselection === "rock")
     {
         if (playerselection === "scissors")
         {
+            winner = "computer"
             return `you lose! ${computerselection} beats ${playerselection}`;
         }
         else if (playerselection === "paper")
         {
+            winner = "player"
             return `you win!yay, ${playerselection} beats ${computerselection}`;
         }
         else
         {
+            winner = "draw"
               return `you both chose ${computerselection}, its a draw`;
         }
     }
@@ -29,29 +33,35 @@ function playround (computerselection, playerselection)
     {
         if (playerselection === "rock")
         {
+            winner = "computer"
             return `you lose! ${computerselection} beats ${playerselection}`;
         }
         else if (playerselection === "scissors")
         {
+            winner = "player"
             return `you win ${playerselection} beats ${computerselection}`;
         }
         else
         {
-              return `you both chose ${computerselection}, its a draw`;
+            winner = "draw"
+            return `you both chose ${computerselection}, its a draw`;
         }
     }
     else
     {
         if (playerselection === "rock")
         {
+            winner = "player"
             return `you win!, ${playerselection} beats ${computerselection}`;
         }
         else if (playerselection === "paper")
         {
+            winner = "computer"
             return `you lose!, ${computerselection} beats ${playerselection}`;
         }
         else
         {
+            winner = "draw"
             return `let's call it a draw, ${playerselection} equals ${computerselection}`;
         }
     }
