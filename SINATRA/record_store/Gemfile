@@ -1,0 +1,5 @@
+source('https://rubygems.org')
+gem ('sinatra')
+gem ('rspec')
+gem ('pry')
+gem ('sinatra-contrib') #this gem allows us to make live changes to our app.rb without reloading our files.
