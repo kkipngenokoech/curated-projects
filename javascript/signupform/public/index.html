@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Form Validation</h1>
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="username">Username</label>
+                        </td>
+                        <td>
+                            <input type="text" name="username" id="username" required pattern="[A-Za-z]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Please enter your email</label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="country">country</label>
+                        </td>
+                        <td>
+                            <input type="text" name="country" id="country">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="zipCode">zip code</label>
+                        </td>
+                        <td>
+                            <input type="text" name="zipCode" id="zipCode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="confirm">Confirm Password</label>
+                        </td>
+                        <td>
+                            <input type="password" name="confirm" id="confirm">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
