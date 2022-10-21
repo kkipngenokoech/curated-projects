@@ -1,0 +1,8 @@
+input :valid {
+    border: 2px solid black;
+}
+
+input :invalid {
+    border: 2px solid red;
+    background-color: red;
+}
