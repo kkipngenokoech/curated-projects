@@ -20,6 +20,11 @@ when we bundle this Gemfile(our gems), it will generate a [Gemfile.lock](Gemfile
 
 this is where we store our backend logic. it for now contains Album.rb, a general rule of thumb is to have a separate file for each custom class. It's also a best practice to name the file the same name as the class.
 
+### [album.rb](lib/album.rb)
+
+`@@albums` - this is a class variable, we are using it here to mock a database.
+our albums only have name attributes but other attributes can be added if need be.
+
 ## [views](views/)
 
 this folder contains our Application's HTML.
@@ -36,6 +41,12 @@ including the code we will put into our `app.rb`
 [album_spec.rb](./spec/album_spec.rb) - it includes unit tests of all the code include inside our [album](lib/album.rb) class.
 
 [album_integration_spec.rb](spec/album_integration_spec.rb) - this includes our integrations tests.
+
+### [album_spec.rb](spec/album_spec.rb)
+
+here we are going to add a method to return all of the results in our database.
+it will be returned in form of an array.
+Our new test is actually covering two things. First, it tests whether we can save albums to our mock database. Second, it verifies that Album.all() works for multiple items.
 
 ## [public](./public/)
 
