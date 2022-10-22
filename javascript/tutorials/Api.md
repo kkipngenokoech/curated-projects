@@ -60,3 +60,5 @@ the default type of an API is a `GET` request. you can change it.
 whenever you want to use APIs always test it using postman first.
 
 when you run your API on the browser it returns your data in json form.
+
+## [API CALLS USING JAVASCRIPT](../weather_api/)

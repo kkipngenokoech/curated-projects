@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApi</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Weather conditions from Anywhere</h1>
+        <p>
+            To get the current weather conditions for a location, please enter the city name or the city and state separated by a comma. Here are three examples:
+        </p>
+        <pre>
+            portland
+            Atlanta, Georgia
+            cairo
+        </pre>
+        <form action="">
+            <label for="location">Enter a location:</label>
+            <input type="text" id="location" name="location">
+            <button type="submit" class="btn-success" id="weatherLocation">
+                Get current Temperature and Humidity
+            </button>
+        </form>
+        <p id="showResponse"></p>
+    </div>
+</body>
+</html>
