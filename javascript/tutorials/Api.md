@@ -62,3 +62,36 @@ whenever you want to use APIs always test it using postman first.
 when you run your API on the browser it returns your data in json form.
 
 ## [API CALLS USING JAVASCRIPT](../weather_api/)
+
+### [index.js](../weather_api/index.js)
+
+we use the constructor of  `XMLHttpRequest` object and save it in a variable known has request.
+the above object is used to interact with servers.
+
+`loadend` event - this is fired up when a request has completed whether successfully(after load) or unsuccessfully(After abort or error).
+
+`const response =  JSON.parse(this.responseText)` - responseText is a property of `XMLHttpRequest`, it contains information sent from the API - weather data or an error message.
+this responseText is always normally populated once a response is received from an API server.
+`JSON.parse()` - this helps us format the data into a JSON format.
+`status` is also a property of XMLHttpRequest and it helps us get the HTTP status code of our api request.
+
+`XMLHttpRequest.open()` - it takes three parameters:
+
+1. the method of the request
+2. the request url
+3. A boolean for whether the request should be asynchronous or not.(we want it async so that the browser cannot freeze.)
+
+## PROTECTING OUR API KEYS
+
+we are going to store our API in a `.env` file stored in our local machines, we can store any environment variables here that we want to keep them secret.
+then this .env file we are going to add it to a `.gitignore`.
+
+## CONFIGURING WEBPACK
+
+`npm install dotenv-webpack@2.0.0 --save-dev` (.dotenv-webpack) - this allows us o make our environment variables to be available inside our application.
+
+this is a plugin and so to use it we need to first require it and then add it to the plugins array in [webpack.config.js](./../weather_api/webpack.config.js)
+
+## ACCESSING ENVIRONMENT VARIABLES
+
+To access environmental variables in our application, we need to preface the environmental variable with process.env

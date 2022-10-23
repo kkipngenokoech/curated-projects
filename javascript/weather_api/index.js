@@ -1,11 +1,11 @@
-import 'Bootstrap'
+import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/styles.css'
 
 // the business logic
 function getWeather(city){
     let request = new XMLHttpRequest()
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=[YOUR-API-KEY-HERE]`
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=process.end.API_KEY`
     request.addEventListener('loadend', function (){
         const response = JSON.parse(this.responseText)
         if (this.status === 200) {
