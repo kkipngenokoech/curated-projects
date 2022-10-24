@@ -11,3 +11,17 @@
     - this is what goes into your [project-level](./quiz/urls.py) `path('',include(quizapp.urls'))`.
     - this is what goes into your [app-level](./quizapp/urls.py) `path('',index, name = 'home')
 9. check also [view](./quizapp/views.py) for the definition of the view.
+
+## making migrations
+
+`python manage.py makemigrations`
+`python manage.py migrate`
+
+## models -> admins
+
+when one creates a django model he/she has to register it at the [admin.py](quizapp/admin.py)
+`Admin.site.register(nameofyourmodel)`
+
+## creating superuser and viewing in Admin
+
+`python manage.py createsuperuser`
