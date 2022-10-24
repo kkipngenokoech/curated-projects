@@ -25,3 +25,8 @@ when one creates a django model he/she has to register it at the [admin.py](quiz
 ## creating superuser and viewing in Admin
 
 `python manage.py createsuperuser`
+
+## redirecting your templates to project level directory
+
+`'DIRS': [os.path.join(BASE_DIR,'templates')],` in your [settings.py](quiz/settings.py)
+mkdir [template](templates/) in your project-level directory
