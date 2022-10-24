@@ -1,0 +1,19 @@
+.apart{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  padding-top: 10px;
+  background-color: rgb(11, 31, 31);
+}
+
+.header{
+  margin-top: 10px;
+}
+
+.h{
+  padding: 4px;
+}
+
+.h:hover{
+  background-color: yellowgreen;
+}

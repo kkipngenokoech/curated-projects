@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/index.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *; script-src 'nonce-loginScript' 'nonce-timeKeeper' 'self' 'unsafe-eval';">
+  <script nonce="loginScript" src="../js/login.js"></script>
+  <!-- <script nonce="checkLogin" src="../js/checkLogin.js"></script> -->
+  <!-- <script nonce="timeKeeper" src='../js/timeKeeper.js'></script> -->
+</head>
+
+<body>
+  <div id='loginSys'>
+    <div class="login">
+      <h2>Authorization Required</h2>
+
+      <form class=".form-data" id='login_form' action="#" method="post">
+        <div class="imgcontainer">
+          <img src="https://picsum.photos/200" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+          <input type="text" placeholder="Email goes here" id="email" name="email" required />
+          <input type="password" placeholder="Passowrd Goes here" name="password" id="password" required />
+          <br>
+          <sub id="errorMessage" style="border: red;"></sub>
+          <button id="loginButton" type="button" onclick="console.log(window)">Login</button>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id='afterlogin' style="display: none;">
+    <div>
+      <div class='headx'>
+        <span id='greeting'></span>
+        <span id="logoutButton" class='logout' onclick="logout()">Logout</span>
+      </div>
+
+      <div class="countup" id="countup1">
+        <span id="hour" class="timeel hours">00</span>
+        <span class="timeel timeRefHours">hours</span>
+        <span id="minutes" class="timeel minutes">00</span>
+        <span class="timeel timeRefMinutes">minutes</span>
+        <span id="seconds" class="timeel seconds">00</span>
+        <span class="timeel timeRefSeconds">seconds</span>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

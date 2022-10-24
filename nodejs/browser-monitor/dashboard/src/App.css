@@ -1,0 +1,352 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #596568;
+}
+
+.getData{
+  color:rgb(109, 206, 138)
+}
+.getData:hover{
+  color:#1b1e21
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.go-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.test{
+  background-color: rgb(59, 88, 88);
+}
+
+/* Define an animation behavior */
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+.go-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.orange{
+  color: #36322e;
+}
+
+.loading-container{
+  margin-top: 45vh;
+  width: 40%;
+  transition: margin-top 1s;
+}
+/* This is the class name given by the Font Awesome component when icon contains 'spinner' */
+.fa-spin {
+  /* Apply 'spinner' keyframes looping once every second (1s)  */
+  animation: spinner 1s linear infinite;
+}
+/* carousel */
+
+.cOpen{
+  display: block;
+  position: fixed;
+  z-index: 1;
+
+  overflow: hidden;
+  background-color: rgb(221, 65, 65);
+  background-color: rgba(219, 173, 47, 0.911); 
+  left: 20%;
+  top: 20%;
+
+  padding: 50px;
+
+  width: 60%;
+  height: 70%;
+}
+
+.darkTransparent{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.carousel-container{
+  position: fixed;
+  top: 20%;
+  left: 80%;
+  z-index: 2;
+  padding:10px;
+  background-color: rgba(221, 41, 41, 0.856)
+}
+
+/* scroll-bar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1B1E21; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #574c44; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #49413a; 
+}
+
+
+.register-card{
+  border: 0px;
+  border-radius: 27px;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.81);
+  overflow: hidden;
+}
+
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: black;
+  background-clip: border-box;
+}
+
+.card-body{
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 70px 60px 60px;
+  width: max-content;
+}
+
+.title-holder{
+  margin-bottom: 30px;
+}
+
+.register-img-card{
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Search */
+
+.scan-box{
+  margin-top: 30vh;
+  width: 40%;
+  transition: margin-top 1s;
+}
+.scan-box-complete{
+  margin-top: 10vh;
+  width: 40%;
+  transition: margin-top 1s;
+}
+
+.shadow-scan{
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.81);
+}
+
+.scan-input{
+  padding:20px;
+  border-radius: 7px;
+  border: 4px;
+  border-color: #FF8C34;
+  font-size: 20px;
+  color: #bbb;
+  background:black;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  font-family: 'Arvo', sans-serif;
+  line-height: 25px;
+}
+
+
+/* myNav */
+
+.black-nav{
+  background-color: black;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.81);
+}
+
+/* Landing */
+
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #FF8C34;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/* Table */
+
+.table {
+  width: 100%;
+  margin-top: 0%;
+  color: #796f67;
+}
+
+.cursorPoint{
+  cursor: pointer;
+}
+
+.imageFix{
+    height: 120px;
+    width: 200px;
+    background-color: rgb(74, 115, 121);
+    cursor: pointer;
+} 
+
+/* thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+} */
+/* tbody {
+  display: block;
+  table-layout: fixed;
+  overflow: scroll;
+  max-height: 200px;
+} */
+
+thead th {
+  top: 73px; 
+  background-color: #1b1e21;
+  }
+
+/* dash */
+
+.dash-cont{
+  margin-top: 10vh;
+}
+
+.cardStyle{
+  margin: 10px;
+  width: 30%;
+}
+
+.cardStyle2{
+  width: 70%;
+  margin: 10px;
+}
+
+/* Settings */
+.setting-container{
+  margin-top: 20vh;
+}
+
+.card-container{
+  height: 60vh;
+  padding: 20px;
+}
+
+
+/* Profile */
+
+.imageContainer{
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.textContInProfile{
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.setting-input{
+  width: 50%;
+}
+
+.field-item{
+  margin-bottom: 10px;
+}
+
+.row-input{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.config-img-card{
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
