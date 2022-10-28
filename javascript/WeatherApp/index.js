@@ -1,25 +1,38 @@
 console.log("hey")
+require('dotenv').config()
+const API_KEY = process.env.API_KEY
+console.log(API_KEY)
 const answer = document.getElementById('paste-answer')
-const city = "cairo"
+let city = ""
 const submit = document.getElementById('button-submit')
-submit.addEventListener('click', function (){
-    const inputCity = document.getElementById('city').value
-    console.log(inputCity)
-})
-const data = () => 
+const geo_location = document.createElement('div')
+const weather_conditions= document.createElement('div')
+const data = (city) => 
 { 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=portland&appid=16a1d419a4a58e105102ab0e9926f057')
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=API_KEY`)
     .then(function(response){
         console.log("we've got your data")
-    return response.json()})
-    .then (function (data){
-        console.log("successfully retrieved")
-        console.log(data)
-        return data
-    })
-}
-const city_data = data()
-console.log(city_data.coord[0])
+        return response.json()})
+        .then (function (data){
+            console.log("successfully retrieved")
+            console.log(data)
+            // data = JSON.stringify(data)
+            geo_location.innerHTML =`city: ${data.name} <br>longitude: ${data.coord.lon} <br> latitude: ${data.coord.lat}`
+            
+            answer.appendChild(geo_location)
+            console.log(data.coord)
+            // console.log(returned_data[0])
+            return data
+        })
+    }
+    //let city_data
+    const findWeather =() => {
+        city = document.getElementById('city').value
+        city_data  = data(city)
+    }
+    
+    //console.log(city_data)
+
 // API_KEY = "16a1d419a4a58e105102ab0e9926f057"
 // const dataInputs = async()=>{
 //     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=16a1d419a4a58e105102ab0e9926f057`);
