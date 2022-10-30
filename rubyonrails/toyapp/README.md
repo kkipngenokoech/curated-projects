@@ -44,3 +44,5 @@ this is a combination of the user model itself and the web interface
 the users model can be created, updated, deleted via HTTP protocol.
 
 we are going to scaffold this resource: `rails generate scaffold User name:string email:string
+
+ensure you migrate your model `rails db:migrate`.
