@@ -69,3 +69,11 @@ in users model you: `has_many :microposts`
 and in microposts model you: `belongs_to :user`
 
 to ensure that fields cannot be blank one normally uses the `presence:true` in the db models.
+
+## inheritance
+
+`<` indicates inheritance from a bigger class.
+
+i.e our user defined models inherit from Application models which inturn inherits from ActiveRecord::Base a base class model which Active Record provides, here's were we normally get to communicate with the databases.
+
+rules defined in the base classes for both the models and the controllers apply to all its children.
