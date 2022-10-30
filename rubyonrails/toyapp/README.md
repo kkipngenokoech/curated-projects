@@ -45,4 +45,17 @@ the users model can be created, updated, deleted via HTTP protocol.
 
 we are going to scaffold this resource: `rails generate scaffold User name:string email:string
 
-ensure you migrate your model `rails db:migrate`.
+ensure you migrate your model `rails db:migrate` - this will update the database with our user model.
+
+when you visit
+
+1. `users/` - it will list all the users in the database.(action - index)
+2. `users/1` - it will show the user with id 1.(action - show)
+3. `users/new` - page to make a new user (action - new)
+4. `users/1/edit` - edit the user with id 1. (action - edit)
+
+variables that start with `@` becomes automatically available in the views.
+
+### microposts resource
+
+`rails generate scaffold Micropost content:text user_id:integer` - generate the resource.
