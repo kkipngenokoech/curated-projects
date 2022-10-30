@@ -59,3 +59,13 @@ variables that start with `@` becomes automatically available in the views.
 ### microposts resource
 
 `rails generate scaffold Micropost content:text user_id:integer` - generate the resource.
+
+to link the microposts and the users resources you form an association (that's between different data models).
+
+one user can have different microposts, and so:
+
+in users model you: `has_many :microposts`
+
+and in microposts model you: `belongs_to :user`
+
+to ensure that fields cannot be blank one normally uses the `presence:true` in the db models.
