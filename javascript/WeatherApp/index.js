@@ -1,7 +1,7 @@
 console.log("hey")
-require('dotenv').config()
-const API_KEY = process.env.API_KEY
-console.log(API_KEY)
+// require('dotenv').config()
+// const API_KEY = process.env.API_KEY
+const API_KEY = "16a1d419a4a58e105102ab0e9926f057"
 const answer = document.getElementById('paste-answer')
 let city = ""
 const submit = document.getElementById('button-submit')
@@ -9,7 +9,7 @@ const geo_location = document.createElement('div')
 const weather_conditions= document.createElement('div')
 const data = (city) => 
 { 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=API_KEY`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
     .then(function(response){
         console.log("we've got your data")
         return response.json()})
@@ -28,7 +28,7 @@ const data = (city) =>
     //let city_data
     const findWeather =() => {
         city = document.getElementById('city').value
-        city_data  = data(city)
+        city_data  = data(city,API_KEY)
     }
     
     //console.log(city_data)
