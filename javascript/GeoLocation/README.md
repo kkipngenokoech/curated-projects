@@ -1,4 +1,8 @@
-# JSON
+# link to live site
+
+[GeoLocate](https://archiveslocation.netlify.app/)
+
+## JSON
 
 javascript object notation - standardized format for structuring data.
 
