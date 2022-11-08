@@ -29,3 +29,15 @@ to run this program, you cd into the folder and then you `cargo run` your progra
 11. publish - package and upload this project to the registry.
 12. install - install a rust binary
 13. uninstall - uninstall a rust binary
+
+### MULTIPLE CARGO TARGETS
+
+almost all cargo takes `main.rs` has it default path.
+
+but you can run different types of `.rs` files, and you can actually cannot pass a file directory to cargo.
+
+in your [cargo.toml](./Cargo.toml), you must define what is known as a binary target.`[[bin]]`.
+
+at the min, this takes a name and a path.
+
+so when running cargo commands you can specify which binary  target to run by specifying the `--bin` flag to cargo.
