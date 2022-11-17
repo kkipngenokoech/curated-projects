@@ -6,7 +6,7 @@ import (
 )
 
 func hello(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprint(w, "Hello Multiverse")
+	fmt.Fprint(w, "Hello future Multiversers")
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
@@ -16,10 +16,14 @@ func headers(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 }
+func home(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprint(w, "welcome to multiverse")
+}
 
 func main() {
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/headers", headers)
+	http.HandleFunc("/", home)
 
 	http.ListenAndServe(":8080", nil)
 }
