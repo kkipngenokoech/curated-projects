@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("")
+	//fmt.Println("")
 	fmt.Println(" __      _")
 	fmt.Println("o'')}___//")
 	fmt.Println(" `_/      )")
