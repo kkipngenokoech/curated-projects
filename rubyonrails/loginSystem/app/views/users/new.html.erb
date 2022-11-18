@@ -1,4 +1,4 @@
-<%= form_with model: @user, url: sign_up_path do |form| %>
+<%= form_with model: @user, url: signup_path do |form| %>
     <%= render partial: "shared/form_errors", locals: {object: form.object} %>
     <div>
         <%= form.label :email %>
@@ -7,12 +7,12 @@
 
     <div>
         <%= form.label :password %>
-        <%= form.password_field :password required: true %>
+        <%= form.password_field :password, required: true %>
     </div>
 
     <div>
         <%= form.label :password_confirmation %>
-        <%= form.password_field :password_confirmation required: true %>
+        <%= form.password_field :password_confirmation, required: true %>
     </div>
 
     <%= form.submit "sign up" %>
