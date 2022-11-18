@@ -17,4 +17,3 @@ to specify their data types you name:string, email:string.
 
 every other time you make changes to your model you have to do a migration.
 `rails db:migrate`.
-
