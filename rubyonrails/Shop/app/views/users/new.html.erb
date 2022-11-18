@@ -1,0 +1,25 @@
+<% provide(:title, 'sign up') %>
+
+<h1>New Users Page</h1>
+
+<%= form_for @user do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %><br>
+    </div>
+    <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %><br>
+    </div>
+    <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %><br>
+    </div>
+    <div>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+    </div>
+    <div>
+        <%= f.submit "create account" %>
+    </div>
+<% end %>

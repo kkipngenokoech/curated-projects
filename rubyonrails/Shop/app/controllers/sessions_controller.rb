@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to_user_path
         else
-            message = "make sure your username and password is correct", status: :unauthorized
-            redirect_to_login_path, notice: message
+            message = "make sure your username and password is correct"#, status: :unauthorized
+            redirect_to_login_path#, notice: message
         end
     end
 

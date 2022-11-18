@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   #root "application#hello"
-  root "sessions#home"
+  #root "sessions#home"
+  get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   get "/login", to: "sessions#login"
@@ -14,5 +15,5 @@ Rails.application.routes.draw do
   post "/logout", to: "sessions#logout"
   get "/logout", to: "sessions#destroy"
 
-  get "*path", to: "fallback#index", constraints: ->(req) {!req.xhr? && req.format.html?}
+  # get "*path", to: "fallback#index", constraints: ->(req) {!req.xhr? && req.format.html?}
 end
