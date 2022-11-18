@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+[tutorial used](https://stevepolito.design/blog/rails-authentication-from-scratch/)
