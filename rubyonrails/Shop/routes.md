@@ -17,4 +17,4 @@ we have the following pages:
 1. signup
 2. login
 3. logout
-4. me
+4. me - this route will enable us keep the user logged in with an auto-login feature.
