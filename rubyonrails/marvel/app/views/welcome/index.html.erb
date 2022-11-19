@@ -1,0 +1,9 @@
+<% if Current.user %>
+    Logged in as: <%= Current.user.email %><br>
+    <%# <%= link_to "edit password" editpassword_path %> 
+    <%= button_to "logout", logout_path, method: :delete %>
+    <% else %>
+    <%= link_to 'sign up', signup_path %>
+    or
+    <%= link_to "login", signin_path %>
+<% end %>
