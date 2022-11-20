@@ -14,5 +14,6 @@
         <li><%= tshirt.character %></li>
         <li><%= tshirt.size %></li>
         <li><img src = "<%= tshirt.img_url %>"></li>
+        <li><%= button_to "🗑", @tshirt , method: :delete %></li>
     <% end %>
 </ul>
