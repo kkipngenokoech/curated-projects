@@ -7,3 +7,9 @@
     or
     <%= link_to "login", signin_path %>
 <% end %>
+
+<ul>
+    <% @tshirts.each do |tshirt| %>
+        <li><%=  tshirt.color %></li><br>
+        <% end %>
+</ul>
