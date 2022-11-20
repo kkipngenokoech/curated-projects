@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_19_143212) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_20_143619) do
+  create_table "tshirts", force: :cascade do |t|
+    t.string "color"
+    t.string "size"
+    t.string "character"
+    t.string "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email", null: false
