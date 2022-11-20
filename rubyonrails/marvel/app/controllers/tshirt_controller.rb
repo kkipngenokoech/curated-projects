@@ -3,7 +3,8 @@ class TshirtController < ApplicationController
   end
 
   def store
-    @tshirt = Tshirt.new({:color => params[:color], :size => params[:size],:character => params[:character]})
+    @image = Cloudinary::Uploader.upload(params[:media])
+    @tshirt = Tshirt.new({:color => params[:color], :size => params[:size],:character => params[:character], :img_url => @image['secure_url']})
     @tshirt.save
     redirect_to ('/')
   end

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ddcear8pu
+  api_key: '285631561798626'
+  api_secret: rb1htBXQjevcyTpFcx7_O5UICo0
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: ddcear8pu
+  api_key: '285631561798626'
+  api_secret: rb1htBXQjevcyTpFcx7_O5UICo0
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: ddcear8pu
+  api_key: '285631561798626'
+  api_secret: rb1htBXQjevcyTpFcx7_O5UICo0
+  enhance_image_tag: true
+  static_file_support: false

@@ -11,5 +11,8 @@
 <ul>
     <% @tshirts.each do |tshirt| %>
         <li><%=  tshirt.color %></li><br>
-        <% end %>
+        <li><%= tshirt.character %></li>
+        <li><%= tshirt.size %></li>
+        <li><img src = "<%= tshirt.img_url %>"></li>
+    <% end %>
 </ul>
