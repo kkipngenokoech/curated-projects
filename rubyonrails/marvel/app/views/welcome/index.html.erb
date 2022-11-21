@@ -10,10 +10,14 @@
 
 <ul>
     <% @tshirts.each do |tshirt| %>
-        <li><%=  tshirt.color %></li><br>
+        <li><%=  tshirt.color %></li>
         <li><%= tshirt.character %></li>
         <li><%= tshirt.size %></li>
         <li><img src = "<%= tshirt.img_url %>"></li>
-        <li><%= button_to "🗑", @tshirt , method: :delete %></li>
+        <li>
+            <%= link_to "🗑", tshirt_path(tshirt) , method: :delete %>  
+            <%= link_to "" %>
+        </li>
+        <br>
     <% end %>
 </ul>

@@ -13,7 +13,10 @@ class TshirtController < ApplicationController
   def destroy
     @tshirt = Tshirt.find(params[:id])
     @tshirt.destroy
-    flash[:notice] = "the t-shirt was successfully destroyed"
-    redirect_to ('/')
+    redirect_to tshirts_url, notice: "the t-shirt was successfully destroyed"
+    
+  end
+
+  def filter
   end
 end

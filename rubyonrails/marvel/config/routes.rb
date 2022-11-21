@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'tshirt/create'
   post 'tshirt/store'
   delete 'deletetshirt/:id', to: "tshirt#destroy"
+  get "filter", to: "tshirt#filter"
   #get 'welcome/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   #resources :welcome
