@@ -19,4 +19,8 @@ class TshirtController < ApplicationController
 
   def filter
   end
+
+  def coord
+    @tshirt = Tshirt.all
+  end
 end
