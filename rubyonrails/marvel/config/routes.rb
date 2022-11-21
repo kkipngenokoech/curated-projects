@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'requests/create'
+  get 'reviews/create'
+  get 'review/create'
   get 'tshirt/create'
   post 'tshirt/store'
   delete 'deletetshirt/:id', to: "tshirt#destroy"
@@ -10,8 +13,8 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "signup", to: "registrations#new"
   post "signup", to: "registrations#create"
-  get "signin", to: "sessions#new"
-  post "signin", to: "sessions#create", as: "login"
+  get "login", to: "sessions#new"
+  post "signin", to: "sessions#create"
   get "logout", to: "sessions#destroy"
   get "password", to: "passwords#edit", as: "editpassword"
   patch "password", to: "passwords#update"
@@ -19,4 +22,6 @@ Rails.application.routes.draw do
   post "password/reset", to: "passwords_resets#create"
   get "password/reset/edit", to: "passwords_resets#edit"
   patch "password/reset/edit", to: "passwords_resets#update"
+  get "Review-box", to: "reviews#create"
+  get "Request-box", to: "requests#create"
 end
