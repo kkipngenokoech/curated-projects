@@ -79,3 +79,25 @@ get 'profile', to: 'user#show'
 you can redeclare that in this way:
 
 get 'profile', action: :show, controller: 'users'
+
+## combining resources
+
+you can combine a number of resources into one resources:
+
+namespace :admin do resources :articles, :comments end.
+
+so when one wants to access the above controllers one goes into the /admin first. ensure that in your controllers you have moved all the controllers into the admin directory.
+
+## NESTED RESOURCES
+
+let's say we have a teacher who has many students and student who has only one teacher, and so to represent this in the resources routing you:
+
+```ruby on rails
+resources :teachers do 
+    resources :students
+    end
+```
+
+so before you access any other ad, you have to route through a teacher_id, the rest ids remain the same.
+
+avoid deep nesting.
