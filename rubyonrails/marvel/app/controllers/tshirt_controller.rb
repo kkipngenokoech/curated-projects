@@ -1,6 +1,13 @@
 class TshirtController < ApplicationController
-  def create
-    
+  def index
+    @tshirts = Tshirt.all
+
+  end
+  def create   
+  end
+
+  def show
+    @tshirt = Tshirt.find(params[:id])
   end
 
   def store

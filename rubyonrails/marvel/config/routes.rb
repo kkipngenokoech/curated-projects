@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources  :welcome
+  resources :tshirt do
+    resources :reviews
+  end
   get 'requests/create'
   get 'reviews/create'
   get 'review/create'
