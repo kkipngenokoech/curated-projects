@@ -2,7 +2,6 @@
 <p> <%= @tshirt.color %></p>
 <p><%= @tshirt.size %> </p>
 <p> <%= @tshirt.character %> </p>
-<p> <%= @tshirt.img_url %> </p>
-
+<p><img src = "<%= @tshirt.img_url %>"</p>
 <p><%= button_to "🗑",@tshirt, method: :delete %> </p>
 <p><%= link_to "leave a comment", new_tshirt_review_path(@tshirt) %> </p>

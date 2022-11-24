@@ -11,7 +11,7 @@ class TshirtController < ApplicationController
   def show
     if Tshirt.where(params[:id]) === nil
       flash[:notice] = "TShirt not found"
-      redirect_to root_path
+      redirect_to index_tshirt_path
     else
       @tshirt = Tshirt.find(params[:id])
     end
