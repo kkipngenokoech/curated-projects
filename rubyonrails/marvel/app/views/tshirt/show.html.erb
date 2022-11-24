@@ -4,5 +4,5 @@
 <p> <%= @tshirt.character %> </p>
 <p> <%= @tshirt.img_url %> </p>
 
-<p><%= link_to "🗑", tshirt_path(@tshirt), method: :delete %> </p>
-<p><%= link_to "leave a comment", tshirt_reviews_path %> </p>
+<p><%= button_to "🗑",@tshirt, method: :delete %> </p>
+<p><%= link_to "leave a comment", new_tshirt_review_path(@tshirt) %> </p>

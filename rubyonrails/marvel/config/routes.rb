@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   #resources :welcome
   # Defines the root path route ("/")
   # root "articles#index"
-  root "welcome#index"
+  root "tshirt#index"
   get "signup", to: "registrations#new"
   post "signup", to: "registrations#create"
   get "login", to: "sessions#new"
