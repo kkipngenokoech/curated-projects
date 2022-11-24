@@ -1,11 +1,12 @@
 class ReviewsController < ApplicationController
   def create
-    @review = Review.new({:feedback => params[:feedback]})
+    @review = Review.new(review_params)
     if @review.save
       flash[:notice] = 'Review was successfully created.'
       redirect_to @review
+    else
+      render 'new'
     end
-
   end
   def index
   end
