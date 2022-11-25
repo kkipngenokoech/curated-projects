@@ -1,7 +1,9 @@
 class TshirtController < ApplicationController
   def index
-    @tshirts = Tshirt.all
-
+    #@tshirts = Tshirt.all
+    @tshirts = Tshirt.filter_by_color(params[:color]) if params[:color].present?
+    @tshirts = Tshirt.filter_by_size(params[:size]) if params[:size].present?
+    @tshirts = Tshirt.filter_by_character(params[:character]) if params[:character].present?
   end
   def new
   end
@@ -33,11 +35,7 @@ class TshirtController < ApplicationController
     # respond_to do |format|
   end
 
-  def filter   
-    respond_to do |format|
-    format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-    format.json { head :no_content }
-  end
+  def filter
   end
 
   def coord

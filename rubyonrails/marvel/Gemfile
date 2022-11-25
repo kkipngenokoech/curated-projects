@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4"
 # bcrypt bundle gem
 gem "bcrypt"
 
+# gem to add tags to application
+gem 'acts-as-taggable-on'
+
 #gem to help us save images
 gem "cloudinary"
 
