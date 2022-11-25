@@ -1,6 +1,6 @@
 class TshirtController < ApplicationController
   def index
-    #@tshirts = Tshirt.all
+    @tshirts = Tshirt.where(nil)
     @tshirts = Tshirt.filter_by_color(params[:color]) if params[:color].present?
     @tshirts = Tshirt.filter_by_size(params[:size]) if params[:size].present?
     @tshirts = Tshirt.filter_by_character(params[:character]) if params[:character].present?
