@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4"
 # bcrypt bundle gem
 gem "bcrypt"
 
+# authentication
+gem "devise"
+
 # gem to add tags to application
 gem 'acts-as-taggable-on'
 
