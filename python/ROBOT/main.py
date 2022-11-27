@@ -1,4 +1,5 @@
-import turtle as t
+import turtle
+t = turtle
 def rectangle(horizontal, vertical, color, degree = 90):
     t.pendown()
     t.pensize(1)
@@ -22,6 +23,7 @@ t.goto(-100, -150)
 rectangle(50, 20,'blue')
 t.goto(-30, -150)
 rectangle(50, 20, 'blue')
+
 # legs
 t.goto(-25, -50)
 rectangle(15, 100, 'grey')
@@ -30,17 +32,6 @@ rectangle(-15, 100, 'grey')
 # body
 t.goto(-90, 100)
 rectangle(100, 150, 'red')
-# arms
-def draw_arms(left_arm_x, left_arm_y):#, left_coord_X, left_coord_Y):
-    t.goto(-150, 70)
-    rectangle(60, 15, 'grey')
-    t.goto(-150, 110)
-    rectangle(left_arm_x, left_arm_y, 'grey')
-    t.goto(10, 70)
-    rectangle(60, 15, 'grey')
-    t.goto(55, 110)
-    # rectangle(15, 40,90, 'grey')
-    rectangle(15, 40,'grey', 90)
 # draw_arms()
 # neck
 t.goto(-50, 120)
@@ -56,5 +47,31 @@ rectangle(5, 5, 'black')
 t.goto(-40, 155)
 rectangle(5, 5, 'black')
 
+# arms
+def draw_arms(left_arm_x, left_arm_y):#, left_coord_X, left_coord_Y):
+    #this is the lower arm
+    t.goto(-150, 70)
+    rectangle(60, 15, 'grey')
+    # this is the upper arm - towards your fingers
+    #rectangle(60, 15, 'grey')
+    #t.goto(-200, 70)
+    rectangle(60, 15, 'grey')
+    raiseUp = turtle
+    #raise up
+    raiseUp.goto(-150, 110)
+    rectangle(left_arm_x, left_arm_y, 'grey')
+    #raiseUp.clear()
+    #keep it straight
+    t.goto(-200, 70)
+    rectangle(60, 15, 'grey')
+    #raise down)
+    # lower
+    t.goto(-150, 70)
+    rectangle(left_arm_x, left_arm_y, 'grey')
+    t.goto(10, 70)
+    rectangle(60, 15, 'grey')
+    t.goto(55, 110)
+    # rectangle(15, 40,90, 'grey')
+    rectangle(15, 40,'grey', 90)
 draw_arms(15,40)
 t.mainloop()
