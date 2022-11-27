@@ -1,0 +1,13 @@
+<%= form_with(model: @tshirt, local: true) do |form| %>
+<div>
+    <%= form.label :character %>
+    <%= form.text_field :character %>
+</div>
+<div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+</div>
+<div>
+    <%= form.submit "save Tshirt" %>
+</div>
+<% end %>

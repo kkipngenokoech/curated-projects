@@ -1,9 +1,14 @@
-<h3>Add a Comment</h3>
-<%= form_for([@tshirt, @tshirt.review.build]) do |form| %>
+<%# <h3>Add a Comment</h3> %>
+<%= form_for([@tshirt, @tshirt.reviews.build]) do |form| %>
 <div>
     <%= form.label :feedback %>
     <br>
     <%= form.text_field :feedback %>
+</div>
+<div>
+    <%= form.label :image %>
+    <br>
+    <%= form.file_field :image %>
 </div>
 <div>
     

@@ -1,12 +1,16 @@
 class ReviewsController < ApplicationController
   def create
-    # @tshirt = Tshirt.find(params[:tshirt_id])
-    # @review = @tshirt.reviews.create(params[:review].permit(:feedback)
-    # @review.save
-    #   flash[:notice] = 'Review was successfully created.'
-    #   redirect_to @review
-    # else
-    #   render 'new'
+    @tshirt = Tshirt.find(params[:tshirt_id])
+    #@review = @tshirt.reviews.create(review_params)
+    @review = @tshirt.reviews.new(review_params)
+    @review.save
+    #redirect_to root_path
+    respond_to do |format|
+      if @review.save
+        format.html { redirect_to root_path, notice: 'Review was successfully created'}
+      else
+        format.html { render action: 'new' }
+      end
     end
   end
   def index
@@ -17,6 +21,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:feedback, :body, :rating)
-    
+    params.require(:review).permit(:feedback, :image)
+  end
 end
