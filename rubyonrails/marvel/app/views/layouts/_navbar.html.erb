@@ -6,7 +6,12 @@
                     <%= link_to "Marvel", root_path %>
                 </div>
                 <nav class = "flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-grow">
-                    <%= link_to "Get started", root_path %>
+                    <% if user_signed_in? %>
+                        Logged in as <strong><% current_user.email %></strong> |
+                        <% link_to "logout" destroy_user_session_path, method: :delete %>
+                    <% else %>
+                        <%= link_to 'sign up', signup_path %> |
+                        <%= link_to "login", new_user_session_path %>
                 </nav>
             </div>
         </div>
