@@ -1,4 +1,5 @@
 class TshirtController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @tshirts = Tshirt.where(nil)
     @tshirts = Tshirt.filter_by_color(params[:color]) if params[:color].present?
