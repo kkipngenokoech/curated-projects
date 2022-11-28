@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+.index-column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}

@@ -5,17 +5,20 @@
     <%= text_field_tag :color, params[:color] %>
     <%= submit_tag "filter" %>
 <% end %>
-
+<div class = "index-row">
 <ul>
     <% @tshirts.each do |tshirt| %>
+    <div class = "index-column">
+        <li><img src = "<%= tshirt.img_url %>"></li>
         <li><%=  tshirt.color %></li>
         <li><%= tshirt.character %></li>
         <li><%= tshirt.size %></li>
-        <li><img src = "<%= tshirt.img_url %>"></li>
         <li><%=  tshirt.reviews.count %> reviews | <%= link_to 'add a review',new_tshirt_review_path(tshirt) %></li>
         <li>
             <%= link_to "show t-shirt", tshirt_path(tshirt)%> 
         </li>
         <br>
+    </div>
     <% end %>
 </ul>
+</div>
