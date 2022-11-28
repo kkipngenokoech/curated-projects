@@ -1,5 +1,10 @@
 
 <%= link_to "create a new t-shirt", new_tshirt_path, method: :new %>
+<%= form_tag "/tshirt", method: "Get" do%>
+    <%# <%= label_tag :color %> 
+    <%= text_field_tag :color, params[:color] %>
+    <%= submit_tag "filter" %>
+<% end %>
 
 <ul>
     <% @tshirts.each do |tshirt| %>
