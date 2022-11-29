@@ -20,3 +20,7 @@ this method will only generate your models with timestamps only, but you can add
 `rails g scaffold books title:string author:string`
 
 so any other time you want to create an instance of the model it would ask you for the title and the string.
+
+one advantage of using a scaffolding command is that all our views, models and migrations are created in the correct naming conventions.
+
+this helps you avoid creating this controllers and models and views manually.
