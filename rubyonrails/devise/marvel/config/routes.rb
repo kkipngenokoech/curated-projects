@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :tshirt do
     resources :reviews
   end
+  delete "sign_out" 
   get 'requests/create'
   get 'reviews/create'
   get 'review/create'
