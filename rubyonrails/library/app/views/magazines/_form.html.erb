@@ -1,0 +1,27 @@
+<%= form_with(model: magazine) do |form| %>
+  <% if magazine.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(magazine.errors.count, "error") %> prohibited this magazine from being saved:</h2>
+
+      <ul>
+        <% magazine.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

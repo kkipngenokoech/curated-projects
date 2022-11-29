@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pens</h1>
+
+<div id="pens">
+  <% @pens.each do |pen| %>
+    <%= render pen %>
+    <p>
+      <%= link_to "Show this pen", pen %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New pen", new_pen_path %>

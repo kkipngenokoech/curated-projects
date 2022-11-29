@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pen %>
+
+<div>
+  <%= link_to "Edit this pen", edit_pen_path(@pen) %> |
+  <%= link_to "Back to pens", pens_path %>
+
+  <%= button_to "Destroy this pen", @pen, method: :delete %>
+</div>

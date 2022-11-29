@@ -1,0 +1,17 @@
+<%= form_with(model: pen) do |form| %>
+  <% if pen.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pen.errors.count, "error") %> prohibited this pen from being saved:</h2>
+
+      <ul>
+        <% pen.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
