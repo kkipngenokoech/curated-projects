@@ -1,22 +1,13 @@
-<div id="<%= dom_id comment %>">
-  <p>
-    <strong>Author:</strong>
-    <%= comment.author %>
-  </p>
+<% unless !comment.persisted? %>
+  <div id="<%= dom_id comment %>">
+    <p>
+      <strong>Author:</strong>
+      <%= comment.author %>
+    </p>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.comment %>
-  </p>
-
-  <p>
-    <strong>Post:</strong>
-    <%= comment.post_id %>
-  </p>
-
-  <p>
-    <strong>Parent:</strong>
-    <%= comment.parent_id %>
-  </p>
-
-</div>
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.comment %>
+    </p>
+  </div>
+<% end %>
