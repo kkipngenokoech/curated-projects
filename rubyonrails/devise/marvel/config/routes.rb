@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   resources :tshirt do
     resources :reviews
   end
-  delete "sign_out" 
-  get 'requests/create'
-  get 'reviews/create'
-  get 'review/create'
-  get 'tshirt/create'
-  post 'tshirt/store'
-  delete 'deletetshirt/:id', to: "tshirt#destroy"
+  #delete "sign_out" 
+  #get 'requests/create'
+  #get 'reviews/create'
+  #get 'review/create'
+  #get 'tshirt/create'
+  #post 'tshirt/store'
+  #delete 'deletetshirt/:id', to: "tshirt#destroy"
   get "filter", to: "tshirt#filter"
   get "co-ord", to: "tshirt#coord"
   #get 'welcome/index'
