@@ -1,5 +1,6 @@
 class TshirtController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :filter]
+  before_action :authenticate_admin!, only: [:new]
   def index
     @tshirts = Tshirt.where(nil)
     @tshirts = Tshirt.filter_by_color(params[:color]) if params[:color].present?
@@ -7,6 +8,7 @@ class TshirtController < ApplicationController
     @tshirts = Tshirt.filter_by_character(params[:character]) if params[:character].present?
   end
   def new
+    #before_action :authenticate_admin!
   end
   def create   
   end

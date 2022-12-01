@@ -1,3 +1,7 @@
+<% if alert %>
+      <p class = "alert"><%= alert %></p>
+<% end %>
+
 <h1>Create a new T-shirt</h1>
 <div>
   <form method="POST" action="/tshirt/store" enctype="multipart/form-data" class="post-form">
