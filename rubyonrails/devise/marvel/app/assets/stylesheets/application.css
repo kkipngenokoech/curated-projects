@@ -17,6 +17,7 @@
     float: left;
     width: 33.33%;
     padding: 5px;
+<<<<<<< HEAD
 }
 
 .stick-to-right {
@@ -41,3 +42,6 @@
   .custom-link:hover {
     color: #014c8c;
   }
+=======
+}
+>>>>>>> parent of f1f02b5 (created admin controller)

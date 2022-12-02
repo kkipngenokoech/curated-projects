@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :admins, only: :index
+=======
+>>>>>>> parent of f1f02b5 (created admin controller)
   devise_for :users
   resources  :welcome
   resources :requests

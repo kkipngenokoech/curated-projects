@@ -1,10 +1,15 @@
 <% if alert %>
       <p class = "alert"><%= alert %></p>
 <% end %>
+<<<<<<< HEAD
 <% if current_user %>
     <%= link_to "create a new t-shirt", new_tshirt_path, method: :new %>
 <% end %>
 <div>
+=======
+
+<%= link_to "create a new t-shirt", new_tshirt_path, method: :new %>
+>>>>>>> parent of f1f02b5 (created admin controller)
 <%= form_tag "/tshirt", method: "Get" do%>
     <%# <%= label_tag :color %> 
     <%= text_field_tag :character, params[:character] %>

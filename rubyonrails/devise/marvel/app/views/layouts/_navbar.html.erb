@@ -16,12 +16,20 @@
                 |
                     <%= link_to "Cart", root_path, class: "custom-link" %>
                 </div>
+<<<<<<< HEAD
                 <nav class = "stick-to-right">
                     <% if user_signed_in? %>
                         <%= link_to "Hi #{current_user.name}", edit_user_registration_path, class: "btn" %><br> <br> <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "btn user" %>
                     <% else %>
                         <%= link_to 'sign in', new_user_session_path, class:"btn" %> <br><br>
                          <%= link_to "sign up", new_user_registration_path, class:"btn" %>
+=======
+                <nav class = "flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-grow">
+                    <% if user_signed_in? %>
+                        <%= link_to "Hi, #{current_user.email}", edit_user_registration_path %> | <%= link_to 'sign out', destroy_user_session_path, :method => :delete %>
+                    <% else %>
+                        <%= link_to 'sign in', new_user_session_path %>  |  <%= link_to "sign up", new_user_registration_path %>
+>>>>>>> parent of f1f02b5 (created admin controller)
                         
                     <% end %>
                 </nav>
