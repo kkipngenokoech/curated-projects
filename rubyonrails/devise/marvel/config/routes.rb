@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :admins
+  resources :admins, only: :index
   devise_for :users
   resources  :welcome
+  resources :requests
   resources :tshirt do
     resources :reviews
   end
@@ -32,5 +33,5 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "passwords_resets#edit"
   patch "password/reset/edit", to: "passwords_resets#update"
   get "Review-box", to: "reviews#create"
-  get "Request-box", to: "requests#create"
+  get "request_box", to: "requests#new" 
 end

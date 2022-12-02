@@ -1,6 +1,7 @@
 class TshirtController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :filter]
-  before_action :authenticate_admin!, only: [:new]
+ # before_action :authenticate_admin!, only: [:new]
+  before_action :require_admin, only: [:new]
   def index
     @tshirts = Tshirt.where(nil)
     @tshirts = Tshirt.filter_by_color(params[:color]) if params[:color].present?
@@ -44,4 +45,12 @@ class TshirtController < ApplicationController
   def coord
     @tshirt = Tshirt.all
   end
+
+  private
+  def require_admin
+    unless current_user.admin?
+      redirect_to root_path, alert: "you are not authorized to access this page"
+    end
+  end
+
 end
