@@ -1,13 +1,17 @@
 <% if alert %>
       <p class = "alert"><%= alert %></p>
 <% end %>
-
-<%= link_to "create a new t-shirt", new_tshirt_path, method: :new %>
+<% if current_user %>
+    <%= link_to "create a new t-shirt", new_tshirt_path, method: :new, class: "custom-link" %>
+<% end %>
+<div>
 <%= form_tag "/tshirt", method: "Get" do%>
     <%# <%= label_tag :color %> 
-    <%= text_field_tag :color, params[:color] %>
-    <%= submit_tag "filter" %>
+    <%= text_field_tag :character, params[:character] %>
+    <%= submit_tag "search", class: "btn btn-primary" %>
+    <%= link_to "filters", filter_path, class: "btn" %>
 <% end %>
+</div>
 <div class = "index-row">
 <ul>
     <% @tshirts.each do |tshirt| %>
@@ -16,10 +20,7 @@
         <li><%=  tshirt.color %></li>
         <li><%= tshirt.character %></li>
         <li><%= tshirt.size %></li>
-        <li><%=  tshirt.reviews.count %> reviews | <%= link_to 'add a review',new_tshirt_review_path(tshirt) %></li>
-        <li>
-            <%= link_to "show t-shirt", tshirt_path(tshirt)%> 
-        </li>
+       <%= link_to "show t-shirt", tshirt_path(tshirt), class: "custom-link" %>  | <%= link_to 'add a review',new_tshirt_review_path(tshirt), class: "custom-link" %></li>
         <br>
     </div>
     <% end %>

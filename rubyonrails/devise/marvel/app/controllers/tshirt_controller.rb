@@ -42,6 +42,6 @@ class TshirtController < ApplicationController
   end
 
   def coord
-    @tshirt = Tshirt.all
+    @tshirts = Tshirt.all
   end
 end
