@@ -1,7 +1,6 @@
 <% if alert %>
       <p class = "alert"><%= alert %></p>
 <% end %>
-
 <%= link_to "create a new t-shirt", new_tshirt_path, method: :new %>
 <%= form_tag "/tshirt", method: "Get" do%>
     <%# <%= label_tag :color %> 

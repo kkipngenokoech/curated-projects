@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admins
   devise_for :users
   resources  :welcome
   resources :tshirt do

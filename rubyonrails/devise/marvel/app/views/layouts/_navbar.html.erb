@@ -5,11 +5,13 @@
                 <div class = "flex flex-row items-center justify-between p-4">
                     <%= link_to "Marvel", root_path %>
                 </div>
-                <nav class = "flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-grow">
+
+                <nav class = "stick-to-right">
                     <% if user_signed_in? %>
-                        <%= link_to "Hi, #{current_user.email}", edit_user_registration_path %> | <%= link_to 'sign out', destroy_user_session_path, :method => :delete %>
+                        <%= link_to "Hi, #{current_user.email}", edit_user_registration_path %> <%= link_to 'sign out', destroy_user_session_path, :method => :delete %>
                     <% else %>
-                        <%= link_to 'sign in', new_user_session_path %>  |  <%= link_to "sign up", new_user_registration_path %>
+                        <%= link_to 'sign in', new_user_session_path%> <br>
+                         <%= link_to "sign up", new_user_registration_path %>
                         
                     <% end %>
                 </nav>
