@@ -7,13 +7,6 @@ class User < ApplicationRecord
     has_one_attached :image
     has_many :reviews
 
-    enum role: [:user, :admin]
-    after_create :set_default_role
     validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'Invalid email' }
-
-    private
-    def set_default_role
-      self.role ||= :user
-    end
 
 end

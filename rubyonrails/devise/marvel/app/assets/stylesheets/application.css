@@ -17,31 +17,4 @@
     float: left;
     width: 33.33%;
     padding: 5px;
-<<<<<<< HEAD
 }
-
-.stick-to-right {
-    width: 100px;
-    float: right;
-}
-
-.btn {
-    background-color: #0275d8;
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-.custom-link {
-    color: #0275d8;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .custom-link:hover {
-    color: #014c8c;
-  }
-=======
-}
->>>>>>> parent of f1f02b5 (created admin controller)

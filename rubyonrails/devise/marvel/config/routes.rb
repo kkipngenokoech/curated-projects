@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :admins, only: :index
-=======
->>>>>>> parent of f1f02b5 (created admin controller)
   devise_for :users
   resources  :welcome
-  resources :requests
   resources :tshirt do
     resources :reviews
   end
@@ -36,5 +31,5 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "passwords_resets#edit"
   patch "password/reset/edit", to: "passwords_resets#update"
   get "Review-box", to: "reviews#create"
-  get "request_box", to: "requests#new" 
+  get "Request-box", to: "requests#create"
 end
