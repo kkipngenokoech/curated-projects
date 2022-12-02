@@ -9,6 +9,7 @@
                 |
                     <%= link_to "New arrivals", root_path, class: "custom-link" %>
                 </div>
+                <% if current_page?(root_path) %>
                 <div class = "stick-second-right">
                     <%= link_to "Orders", root_path, class: "custom-link" %>
                 |
@@ -16,6 +17,7 @@
                 |
                     <%= link_to "Cart", root_path, class: "custom-link" %>
                 </div>
+                <% end %>
                 <nav class = "stick-to-right">
                     <% if user_signed_in? %>
                         <%= link_to "Hi #{current_user.name}", edit_user_registration_path, class: "btn" %><br> <br> <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "btn user" %>

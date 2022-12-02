@@ -1,11 +1,12 @@
 <h1>Filters</h1>
 <form method = "POST", action = "/tshirt/index" enctype="multipart/form-data">
     <table>
-        <th>
-            <tr>COLOR</tr>
-            <tr>size</tr>
-            <tr>CHARACTER</tr>
-        </th>
+        <tr>
+            <td>COLOR</td>
+            <td>size</td>
+            <td>CHARACTER</td>
+        </tr>
+        <tr>
         <td>
             <input type = "checkbox" name = "selectall" value = "select all"> select all<br>
             <input type = "checkbox" name = "Blue" value = "Blue"> Blue<br>
@@ -29,6 +30,7 @@
             <input type = "checkbox" name = "captainamerica" value = "captainamerica"> Captain-America<br>
             <input type = "checkbox" name = "hulk" value = "hulk"> Hulk<br>
         </td>
+        </tr>
     </table>
     <div>
         <input type= "submit" value = "submit">
