@@ -13,3 +13,9 @@ one runs the following command
 ## linking it to our users model
 
 to link it to your models, you `rails g devise:name_of_model`.
+
+ooowh, and we have to generate our views for devise, `rails g devise:views`
+
+generate a migration and you can use your models in your data.
+
+all that it remains is to code the sign out sign in buttons in our views.
