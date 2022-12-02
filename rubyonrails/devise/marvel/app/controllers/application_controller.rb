@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
 
     def authenticate_admin!
         authenticate_user!
-        redirect_to root_path root_path, status: :forbidden, alert: "only admins can create Tshirts" unless current_user.admin?
+        redirect_to root_path, notice: "only admins can create Tshirts" unless current_user.admin?
     end
 end

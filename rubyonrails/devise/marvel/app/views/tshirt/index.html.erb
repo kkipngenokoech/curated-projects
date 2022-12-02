@@ -1,7 +1,7 @@
 <% if alert %>
       <p class = "alert"><%= alert %></p>
 <% end %>
-<% if current_user %>
+<% if current_user &.admin? %>
     <%= link_to "create a new t-shirt", new_tshirt_path, method: :new, class: "custom-link" %>
 <% end %>
 <div>
