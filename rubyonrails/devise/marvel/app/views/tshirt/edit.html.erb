@@ -1,0 +1,14 @@
+<h1>Edit T-Shirt</h1>
+
+<%= form_for @tshirt do |f| %>
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+  <%= f.label :character %>
+  <%= f.text_field :character %>
+
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+
+  <%= f.submit "Update" %>
+<% end %>

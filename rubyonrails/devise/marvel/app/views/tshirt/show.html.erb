@@ -3,10 +3,10 @@
 <p> <%= @tshirt.character %> </p>
 <p><img src = "<%= @tshirt.img_url %>"</p>
 <p><%= button_to "🗑",@tshirt, method: :delete, class: "custom-link" %> </p>
-<%# <><%= link_to "leave a comment", new_tshirt_review_path(@tshirt) %> 
+<%# <><%= link_to "leave a comment", new_tshirt_review_path(@tshirt) %>
+<%= link_to "edit", edit_tshirt_path(@tshirt) %> 
 <%= render @tshirt.reviews %>
 
-<h3>leave a review</h3>
-<%= render 'reviews/form' %>
+
 
 
