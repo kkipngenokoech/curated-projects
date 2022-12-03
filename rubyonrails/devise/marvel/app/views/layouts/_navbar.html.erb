@@ -21,7 +21,7 @@
                 <% end %>
                 <nav class = "stick-to-right">
                     <% if user_signed_in? %>
-                        <%= link_to "#{current_user.name}", edit_user_registration_path, class: "btn" %><br> <br> <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "btn user" %>
+                        <%= link_to "Hi #{current_user.email}", edit_user_registration_path, class: "btn" %><br> <br> <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "btn user" %>
                     <% else %>
                         <%= link_to 'sign in', new_user_session_path, class:"btn" %> <br><br>
                          <%= link_to "sign up", new_user_registration_path, class:"btn" %>
