@@ -1,6 +1,7 @@
-<div>
+<div class = "NavBar">
     <div class = "antialiased bg-gray-100">
         <div class = "w-full text-gray-700 bg-white" >
+            <div class = "NavBar">
             <div class = "flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class = "flex flex-row items-center justify-between p-4">
                     <%= link_to "Marvel", root_path, class: "custom-link" %>  
@@ -20,13 +21,14 @@
                 <% end %>
                 <nav class = "stick-to-right">
                     <% if user_signed_in? %>
-                        <%= link_to "Hi #{current_user.name}", edit_user_registration_path, class: "btn" %><br> <br> <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "btn user" %>
+                        <%= link_to "#{current_user.name}", edit_user_registration_path, class: "btn" %><br> <br> <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "btn user" %>
                     <% else %>
                         <%= link_to 'sign in', new_user_session_path, class:"btn" %> <br><br>
                          <%= link_to "sign up", new_user_registration_path, class:"btn" %>
                         
                     <% end %>
                 </nav>
+            </div>
             </div>
         </div>
     </div>
