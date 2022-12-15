@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## API
+
+I am starting this project just to learn about ruby on rails apis
+
+the ruby on rails gem we are going to use is 'excon'
+
+N/B to style we are going to use 'bootstrap'
