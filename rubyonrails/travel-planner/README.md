@@ -29,4 +29,5 @@ I am starting this project just to learn about ruby on rails apis
 
 the ruby on rails gem we are going to use is 'excon'
 
-N/B to style we are going to use 'bootstrap'
+N/B to style we are going to use 'bootstrap' and to btw for helper routes, we use the ones in the get "" before it matches you to a route i.e
+`get "/users" => "users#index` the helper method for this is `users_path`

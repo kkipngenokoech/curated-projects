@@ -1,9 +1,9 @@
 class TravelsController < ApplicationController
+  require "uri"
   before_action :set_travel, only: %i[ show edit update destroy ]
 
   # GET /travels or /travels.json
   def index
-    @travels = Travel.all
   end
 
   # GET /travels/1 or /travels/1.json
@@ -57,6 +57,14 @@ class TravelsController < ApplicationController
     end
   end
 
+  def search
+    countries = find_country(params[:country])
+    unless countries
+      flash[:alert] = "Country not found"
+      return render action: :index
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_travel
@@ -67,4 +75,19 @@ class TravelsController < ApplicationController
     def travel_params
       params.fetch(:travel, {})
     end
+
+    def request_api(url)
+      response = Excon.get(url, headers: {
+        "X-RapidAPI-Host" => URI.parse(url).host,
+        "X-RapidAPI-Key" => ENV.fetch("RAPID_API_KEY")
+        })
+        return nil if response.status != 200
+        JSON.parse(response.body)
+      end
+      def find_country(name)
+        uri = URI.new("https://restcountries-v1.p.rapidapi.com/name/#{name}")
+        encoded_uri = URI.encode
+      request_api(encoded_uri)
+    end
+
 end

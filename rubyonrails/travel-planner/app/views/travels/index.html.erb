@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Travels</h1>
-
-<div id="travels">
-  <% @travels.each do |travel| %>
-    <%= render travel %>
-    <p>
-      <%= link_to "Show this travel", travel %>
-    </p>
-  <% end %>
+<!-- app/views/travel/index.html.erb -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mt-5">
+     <div class="col-lg-12 mt-5">
+      <% if flash[:alert] %>
+        <div class="alert alert-warning"><%= flash[:alert] %></div>
+      <% end %>
+      <div class="mx-auto mt-5" style="width: 400px">
+        <%= form_with(url: search_path, method: 'get', local: true) do %>
+          <div class="form-group">
+            <%= label_tag :country, 'Search for a country '%>
+            <%= text_field_tag :country, nil, placeholder: 'Eg. Germany', class: 'form-control' %>
+          </div>
+          <%= button_tag 'Search', class: 'btn btn-success btn-block' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New travel", new_travel_path %>
