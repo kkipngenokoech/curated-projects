@@ -4,6 +4,7 @@ class IdeasController < ApplicationController
   # GET /ideas or /ideas.json
   def index
     @ideas = Idea.all
+    #render :json => @ideas - return json data
   end
 
   # GET /ideas/1 or /ideas/1.json
