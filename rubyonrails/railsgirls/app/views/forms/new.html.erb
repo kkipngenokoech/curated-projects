@@ -3,3 +3,10 @@
     <input id="query" name="query" type="text" />
     <input name="commit" type="submit" value="search" data-disable-with="Search" />
   </form>
+<br>
+<br>
+   <%= form_with(url: "/forms", method: "post", data: { turbo: false} ) do %>
+    <%= label_tag(:query, "Search for:") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search") %>
+  <% end %>
