@@ -12,3 +12,6 @@ rails do some heavy lifting for us and so it has some helpers to help us with th
 
 ### form_with
 
+to make a form with `form_with` you pass the following parameters the url and method, it takes care of the CSRF security token by automatically creating and hiding it.
+
+the default path/action is the current page
