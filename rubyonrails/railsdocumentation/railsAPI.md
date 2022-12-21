@@ -4,6 +4,10 @@ this involves coding your own apis, that is telling your controllers to spit out
 
 your rails application is already basically an api
 
+apis helps us to communicate with other applications.
+
+the components within your rails application also speaks to each other via an api.
+
 ## basics to building restful apis
 
 if you want rails app to return JSON instead of HTMl you need to tell your controller to do so.
@@ -43,3 +47,11 @@ In this case, #respond_to passes the block a format object, to which you can att
 The #render function is smart enough to know how to render a wide range of formats. When you pass it the key :json, it will call #to_json on the value, in this case @users.
 
 just like that that is your api.
+
+## specifying attributes to return
+
+when returning data to the browser as json, it returns everything, and so if you want it to return only some specific attributes you have to specify them in your models
+
+the to_json method normally does two things:
+
+1. it runs #as_json method which returns a hash of attributes which will be rendered as JSON.
