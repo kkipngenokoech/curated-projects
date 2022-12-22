@@ -37,3 +37,15 @@ this is what some companies provide instead of APIs.
 this are normally javascript libraries that contain all the code necessary to access their API.
 
 this becomes even more simple since you will be accessing there data using basic js methods.
+
+## kittens api
+
+gem rest-client - this gem helps you to get or make api requests from the irb ensure that you install it `gem install rest-client`
+
+to make api requests from the terminal irb, you have to require the rest-client gem first
+
+`require "rest-client"`
+
+then you store your data you get from the url you have requested `response = RestClient.get(paste your url here)`
+
+`response = RestClient("http://localhost:3000/kittens")
