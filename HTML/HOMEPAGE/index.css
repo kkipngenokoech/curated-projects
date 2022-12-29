@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(123, 201, 224);
+}
+
+.navbar {
+    background-color: rgb(207, 229, 128);
+    width: 1290px;
+    height: 50px;
+    padding: 2px
+    
+}
+.authentication {
+    float: right
+}
+.logo {
+    font-size: 30px;
+    float: left;
+}
+
+.homepage-links {
+    float: 2/3
+}
