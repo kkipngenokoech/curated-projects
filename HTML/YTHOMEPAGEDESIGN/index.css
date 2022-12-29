@@ -53,3 +53,48 @@ nav ul li a {
     text-decoration: none;
     color: #333;
 }
+.content h1 {
+    font-size: 50px;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color: #232d60;
+}
+
+.content p {
+    font-size: 20px;
+    color: #6a7199;
+}
+
+.content {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.content .btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #87adfe, #ff77cd);
+    border-radius: 6px;
+    padding: 10px 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    box-shadow: 3px 8px 22px rgba(94, 28, 68, 0, 15);
+}
+
+.arrow-icons {
+    margin-top: 40px;
+    display: flex;
+}
+
+.arrow-icons img {
+    width: 40px;
+    margin-right: 25px;
+}
+
+.feature-img {
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
