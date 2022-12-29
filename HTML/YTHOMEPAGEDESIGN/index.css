@@ -98,3 +98,18 @@ nav ul li a {
     bottom: 0;
     right: 100px;
 }
+
+.social-links {
+    /* transform: rotate(-90deg); */
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    right: 180px;
+}
+
+.social-links * {
+    color: #6a7199;
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: 14px;
+}
