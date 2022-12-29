@@ -10,7 +10,9 @@ body {
     background-color: rgb(207, 229, 128);
     width: auto;
     height: 50px;
-    padding: 2px
+    padding: 2px;
+    display: flex;
+    align-items: center;
     
 }
 .authentication {
