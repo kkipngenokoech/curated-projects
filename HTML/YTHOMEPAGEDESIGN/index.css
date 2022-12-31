@@ -6,7 +6,9 @@
 .container {
     height: 100vh;
     width: 100%;
-    background-image: url(./images/backgroundimage.JPG);
+    /* background-image: url(./images/backgroundimage.JPG); */
+    background-color: rgb(243, 239, 239);
+    background-blend-mode: multiply;
     background-position: right;
     background-size: cover;
     padding-left: 5%;
@@ -59,6 +61,28 @@ nav ul li a {
     margin-top: 24px;
     margin-bottom: 15px;
     color: #232d60;
+}
+
+/* authentication */
+
+.authentication {
+    flex: 1;
+    padding-left: 60px;
+    position:absolute;
+    right: 0;
+}
+
+.authentication ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 10px;
+
+}
+
+.authentication ul li a {
+    text-decoration: none;
+    background: linear-gradient(45deg, #87adfe, #ff77cd);
+    border-radius: 6px;
 }
 
 .content p {
